@@ -20,3 +20,8 @@ export const getCurrencySymbol = (currency, availableCurrencies) => {
   }
   return currencyObject.symbol
 }
+
+export const capitalize = (text) => {
+  const textLower = text.toLowerCase()
+  return textLower.charAt(0).toUpperCase() + textLower.slice(1)
+}

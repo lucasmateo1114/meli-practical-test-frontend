@@ -4,6 +4,7 @@ import CommonLayout from "../layouts/CommonLayout"
 import NotFoundPage from "../pages/NotFoundPage"
 import DefaultLoading from "../components/Loading"
 
+const LazyHomePage = React.lazy(() => import("../pages/HomePage"))
 const LazySearchResult = React.lazy(() => import("../pages/SearchResult"))
 const LazyProductDetailPage = React.lazy(
   () => import("../pages/ProductDetailPage"),
@@ -14,6 +15,14 @@ const RouterSwitch = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<CommonLayout></CommonLayout>}>
+          <Route
+            index
+            element={
+              <Suspense fallback={<DefaultLoading></DefaultLoading>}>
+                <LazyHomePage></LazyHomePage>
+              </Suspense>
+            }
+          ></Route>
           <Route
             path="items"
             element={

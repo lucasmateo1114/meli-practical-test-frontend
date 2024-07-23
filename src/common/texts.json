@@ -24,5 +24,18 @@
   "NOT_FOUND_PAGE": {
     "NOT_FOUND_MESSAGE": "Página no encontrada. ",
     "NOT_FOUND_LINK_MESSAGE": "Ir a la página de inicio"
+  },
+  "SEO": {
+    "HOME_PAGE": {
+      "KEYWORDS": "Mercado Libre, envíos gratis, compra en linea, electrodomésticos, supermercado",
+      "DESCRIPTION": "Compre productos con Envío Gratis en el día en Mercado Libre. Encuentre miles de marcas y productos a precios increíbles."
+    },
+    "SEARCH_RESULT": {
+      "DESCRIPTION": "Envíos Gratis en el día ✓ Compre {searchTerm} en cuotas sin interés! Conozca nuestras increíbles ofertas y promociones en millones de productos."
+    },
+    "NOT_FOUND_PAGE": {
+      "TITLE": "Página no encontrada",
+      "DESCRIPTION": "La página que buscas no existe."
+    }
   }
 }

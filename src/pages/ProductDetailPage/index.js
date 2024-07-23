@@ -8,6 +8,8 @@ import ProductNotFound from "../../components/ProductNotFound"
 import UnexpectedError from "../../components/UnexpectedError"
 import DefaultLoading from "../../components/Loading"
 import useWindowSize from "../../hooks/useWindowSize"
+import SEO from "../../components/SEO"
+import buildSeoKeywords from "../../common/buildSeoKeywords"
 import texts from "../../common/texts.json"
 import "./index.css"
 
@@ -45,6 +47,12 @@ const ProductDetailPage = () => {
         <DefaultLoading></DefaultLoading>
       ) : (
         <>
+          <SEO
+            title={item.title}
+            image={item.picture}
+            description={item.description}
+            keywords={buildSeoKeywords(item.categories)}
+          />
           <Breadcrumb categories={item?.categories}></Breadcrumb>
           {isMobile ? (
             <ProductDetailMobile product={item}></ProductDetailMobile>

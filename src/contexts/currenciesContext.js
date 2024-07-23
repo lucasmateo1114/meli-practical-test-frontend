@@ -1,5 +1,4 @@
 import React, { createContext, useState, useEffect } from "react"
-import axios from "axios"
 import getConfig from "../common/getConfig"
 import { getCurrenciesFromSite } from "../common/clients/currencies"
 const { DEFAULT_SITE_ID } = getConfig
