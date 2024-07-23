@@ -1,0 +1,25 @@
+.unexpected-error__container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.unexpected-error__info {
+  font-size: 24px;
+  color: #666666;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.unexpected-error__info img {
+  width: 300px;
+}
+
+@media (max-width: 767px) {
+  .unexpected-error__info img {
+    width: 200px;
+  }
+}

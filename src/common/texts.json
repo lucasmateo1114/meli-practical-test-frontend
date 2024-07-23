@@ -1,0 +1,28 @@
+{
+  "SEARCH_RESULT": {
+    "NO_RESULTS_MESSAGE": "No se hallaron resultados, realiza otra busqueda o ",
+    "NO_RESULTS_LINK_MESSAGE": "ve a la página de inicio"
+  },
+  "STATUS_CODE": {
+    "NOT_FOUND": 404
+  },
+  "UNEXPECTED_ERROR_MESSAGE": "Ha ocurrido un error inesperado, lo solucionaremos lo más pronto posible. ",
+  "UNEXPECTED_ERROR_LINK_MESSAGE": "Ir a la página de inicio",
+  "LOADING_TEXT": "Cargando...",
+  "CONDITION": {
+    "new": "Nuevo",
+    "not_specified": "No especificado por el usuario",
+    "used": "Usado"
+  },
+  "PRODUCT_DETAIL_PAGE": {
+    "PRODUCT_DESCRIPTION_TITLE": "Descripción del producto",
+    "BUY_BUTTON_TEXT": "Comprar",
+    "SOLD_OUT_TEXT": "vendidos",
+    "PRODUCT_NOT_FOUND_MESSAGE": "Producto no encontrado. ",
+    "PRODUCT_NOT_FOUND_LINK_MESSAGE": "Ir a la página de inicio"
+  },
+  "NOT_FOUND_PAGE": {
+    "NOT_FOUND_MESSAGE": "Página no encontrada. ",
+    "NOT_FOUND_LINK_MESSAGE": "Ir a la página de inicio"
+  }
+}

@@ -1,0 +1,11 @@
+.product-list__container {
+  background-color: #fff;
+  width: 100%;
+}
+
+.product-list__container hr {
+  border: none;
+  height: 1px;
+  background-color: #eeeeee;
+  margin: 0 auto;
+}
