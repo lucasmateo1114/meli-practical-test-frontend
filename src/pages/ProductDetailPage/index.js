@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import { getItemById } from "../../common/clients/items"
-import Breadcrumb from "../../components/Breadcrum"
+import Breadcrumb from "../../components/Breadcrumb"
 import ProductDetail from "../../components/ProductDetail"
 import ProductDetailMobile from "../../components/ProductDetailMobile"
 import ProductNotFound from "../../components/ProductNotFound"
 import UnexpectedError from "../../components/UnexpectedError"
-import DefaultLoading from "../../components/Loading"
+import ProductDetailPageSkeleton from "../../skeletons/ProductDetailPageSkeleton"
 import useWindowSize from "../../hooks/useWindowSize"
 import SEO from "../../components/SEO"
 import buildSeoKeywords from "../../common/buildSeoKeywords"
@@ -44,7 +44,7 @@ const ProductDetailPage = () => {
   return (
     <>
       {!item ? (
-        <DefaultLoading></DefaultLoading>
+        <ProductDetailPageSkeleton></ProductDetailPageSkeleton>
       ) : (
         <>
           <SEO

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react"
 import { useSearchParams } from "react-router-dom"
-import Breadcrumb from "../../components/Breadcrum"
+import Breadcrumb from "../../components/Breadcrumb"
 import ProductList from "../../components/ProductList"
 import { searchItems } from "../../common/clients/items"
 import NotResultsFound from "../../components/NotResultsFound"
 import UnexpectedError from "../../components/UnexpectedError"
-import DefaultLoading from "../../components/Loading"
+import SearchResultSkeleton from "../../skeletons/SearchResultSkeleton"
 import SEO from "../../components/SEO"
 import buildSeoKeywords from "../../common/buildSeoKeywords"
 import { capitalize } from "../../common/utils"
@@ -49,19 +49,17 @@ const SearchResult = () => {
   return (
     <>
       {!result ? (
-        <DefaultLoading></DefaultLoading>
+        <SearchResultSkeleton></SearchResultSkeleton>
       ) : (
-        <>
+        <div className="search-result__container">
           <SEO
             title={seoTitle}
             description={seoDescription}
             keywords={buildSeoKeywords(result.categories)}
           />
-          <div className="search-result__container">
-            <Breadcrumb categories={result.categories}></Breadcrumb>
-            <ProductList products={result.items}></ProductList>
-          </div>
-        </>
+          <Breadcrumb categories={result.categories}></Breadcrumb>
+          <ProductList products={result.items}></ProductList>
+        </div>
       )}
     </>
   )

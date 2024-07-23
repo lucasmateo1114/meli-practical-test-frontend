@@ -2,7 +2,7 @@ import React, { Suspense } from "react"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import CommonLayout from "../layouts/CommonLayout"
 import NotFoundPage from "../pages/NotFoundPage"
-import DefaultLoading from "../components/Loading"
+import SearchResultSkeleton from "../skeletons/SearchResultSkeleton"
 
 const LazyHomePage = React.lazy(() => import("../pages/HomePage"))
 const LazySearchResult = React.lazy(() => import("../pages/SearchResult"))
@@ -18,7 +18,7 @@ const RouterSwitch = () => {
           <Route
             index
             element={
-              <Suspense fallback={<DefaultLoading></DefaultLoading>}>
+              <Suspense>
                 <LazyHomePage></LazyHomePage>
               </Suspense>
             }
@@ -26,7 +26,9 @@ const RouterSwitch = () => {
           <Route
             path="items"
             element={
-              <Suspense fallback={<DefaultLoading></DefaultLoading>}>
+              <Suspense
+                fallback={<SearchResultSkeleton></SearchResultSkeleton>}
+              >
                 <LazySearchResult></LazySearchResult>
               </Suspense>
             }
@@ -34,7 +36,7 @@ const RouterSwitch = () => {
           <Route
             path="items/:id"
             element={
-              <Suspense fallback={<DefaultLoading></DefaultLoading>}>
+              <Suspense>
                 <LazyProductDetailPage></LazyProductDetailPage>
               </Suspense>
             }
