@@ -1,5 +1,5 @@
 export const getDecimals = (number) => {
-  if (!number) {
+  if (number === undefined) {
     return "00"
   }
   if (number === 0) {

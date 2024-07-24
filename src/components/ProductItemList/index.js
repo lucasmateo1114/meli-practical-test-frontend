@@ -40,17 +40,17 @@ const ProductItemList = ({ product }) => {
         <div className="product-item-list__product-price">
           {currencySymbol} {priceFormatter(amount)}{" "}
           {free_shipping ? (
-            <img alt="Free shipping" src="/assets/img/ic_shipping.png"></img>
+            <img alt="Envío gratis" src="/assets/img/ic_shipping.png"></img>
           ) : null}
         </div>
-        <div
-          onClick={handleItemClick}
-          className="product-item-list__product-description"
-        >
-          <div className="product-item-list__clickable-element">{title}</div>
-          <div className="product-item-list__product-description">
-            {texts.CONDITION[condition]}
+        <div className="product-item-list__product-description">
+          <div
+            onClick={handleItemClick}
+            className="product-item-list__clickable-element"
+          >
+            {title}
           </div>
+          <div>{texts.CONDITION[condition]}</div>
         </div>
       </div>
       <div className="product-item-list__place">{brand}</div>

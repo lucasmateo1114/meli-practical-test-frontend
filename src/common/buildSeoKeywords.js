@@ -10,7 +10,7 @@ const buildSeoKeywords = (texts) => {
       keywords.push(phrase.replace("{text}", text))
     })
   })
-  return keywords.toString()
+  return keywords.join(", ")
 }
 
 export default buildSeoKeywords

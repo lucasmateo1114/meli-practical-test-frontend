@@ -1,8 +1,34 @@
-import { render, screen } from "@testing-library/react"
+import { act } from "react"
+import { render } from "@testing-library/react"
 import App from "./App"
 
-test("renders learn react link", () => {
-  render(<App />)
-  const linkElement = screen.getByText(/learn react/i)
-  expect(linkElement).toBeInTheDocument()
+jest.mock("./common/clients/currencies", () => {
+  return {
+    getCurrenciesFromSite: () => mockCurrencies,
+  }
+})
+
+const mockCurrencies = [
+  {
+    id: "ARS",
+    symbol: "$",
+  },
+  {
+    id: "USD",
+    symbol: "US$",
+  },
+]
+
+describe("App tests", () => {
+  it("Should render correctly", async () => {
+    let outContainer
+
+    await act(async () => {
+      const { container } = render(<App />)
+      outContainer = container
+    })
+    expect(
+      outContainer.getElementsByClassName("header__search-input"),
+    ).toBeTruthy()
+  })
 })

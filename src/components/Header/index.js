@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { useNavigate, useLocation, useSearchParams } from "react-router-dom"
+import texts from "./../../common/texts.json"
 import "./index.css"
 
 const Header = (props) => {
@@ -56,7 +57,7 @@ const Header = (props) => {
           <input
             onChange={handleOnChangeInputValue}
             onKeyDown={handleKeyPress}
-            placeholder="Nunca dejes de buscar"
+            placeholder={texts.HEADER.SEARCH_INPUT_PLACE_HOLDER}
             value={searchTerm}
           ></input>
           <button onClick={handleOnClickButton}></button>

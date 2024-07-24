@@ -9,7 +9,7 @@ const { RESULTS_QUANTITY } = getConfig
 const ProductList = ({ products }) => {
   return (
     <div className="product-list__container">
-      {products?.slice(0, RESULTS_QUANTITY).map((product, index) => {
+      {products?.slice(0, RESULTS_QUANTITY).map((product) => {
         return (
           <Fragment key={product.id}>
             <ProductItemList product={product}></ProductItemList>

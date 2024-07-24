@@ -23,7 +23,6 @@ const ProductDetailPage = () => {
   useEffect(() => {
     const getItem = async () => {
       const response = await getItemById(id)
-      console.log(response)
       if (response.error) {
         setError(response.statusCode)
       } else {
